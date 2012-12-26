@@ -1,0 +1,14 @@
+<h1> Listing events</h1>
+<%if @category.events.empty?  %>
+<p>currently no events</p>
+<%else %>
+<table>
+	<tr><th>event name</th></tr>	
+	<% @events.each do |event| %>
+	<tr><td><%= event.name %></td></tr>
+	<%end%>
+</table>
+<br/>
+<%end%>
+<%= link_to "create a new event",new_category_event_path(@category) %>
+

@@ -1,0 +1,9 @@
+<%= form_for([@category, @event]) do |f|%>
+	Name<br/>
+	<%= f.text_field :name %><br/>
+	Description<br/>	
+	<%= f.text_area :description %><br/>
+	place<br/>
+	<%= f.text_field :place %><br/>
+	<%= f.submit %>
+<% end %>
