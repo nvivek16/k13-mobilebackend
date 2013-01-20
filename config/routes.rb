@@ -1,4 +1,8 @@
 K13::Application.routes.draw do
+  resources :lectures
+
+  resources :workshops
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -59,4 +63,5 @@ K13::Application.routes.draw do
 	resources :events
  end
  match 'events/:id' => 'events#show'
+ resources :updates
 end

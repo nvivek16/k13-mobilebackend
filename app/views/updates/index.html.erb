@@ -1,0 +1,9 @@
+<h1> Listing Updates</h1>
+
+	<% @updates.each do |update| %>
+	
+	<%= update.content%></br><%= link_to "Edit",edit_update_path(update) %> <%= link_to "Delete",update_path(update), :method => :delete %>
+	
+	<%end%>
+<br/>
+<%=link_to "create a new update",new_update_path %>
